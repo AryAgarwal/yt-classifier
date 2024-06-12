@@ -6,3 +6,5 @@ Created using FastAPI and a front-end HTMl page. Video id, title, transcription 
 Model was not giving accurate results so decided to create a custom dataset using the Youtube API to fetch videos and their transciptions. However, that feature is not currently working.
 
 In the colab notebook, I have fine-tuned the model using a dataset from kaggle. But the dataset is not very helpful so predictions could still be more accurate.
+
+To run the project, run index.html on a live server and keep the backend running by typing python main.py
