@@ -10,7 +10,7 @@ import yt_dlp
 import whisper
 
 # YouTube API setup
-api_key = 'AIzaSyDRdE7pbPZsyep2qNYhYbcjBtXCDS_57GI'
+api_key = ''
 youtube = build('youtube', 'v3', developerKey=api_key)
 
 # Define YouTube category IDs mapped to your domains
