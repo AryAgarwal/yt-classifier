@@ -8,7 +8,7 @@
 # logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # # Set up YouTube API
-# api_key = 'AIzaSyDRdE7pbPZsyep2qNYhYbcjBtXCDS_57GI'
+# api_key = ''
 # youtube = build('youtube', 'v3', developerKey=api_key)
 
 # # Function to get video details
@@ -76,7 +76,7 @@
 # logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # # Set up YouTube API
-# api_key = 'AIzaSyDRdE7pbPZsyep2qNYhYbcjBtXCDS_57GI'
+# api_key = ''
 # youtube = build('youtube', 'v3', developerKey=api_key)
 
 # # Function to get video transcript
@@ -152,7 +152,7 @@ from sklearn.model_selection import train_test_split
 from datasets import Dataset
 
 # YouTube API setup
-api_key = 'AIzaSyDRdE7pbPZsyep2qNYhYbcjBtXCDS_57GI'
+api_key = ''
 youtube = build('youtube', 'v3', developerKey=api_key)
 
 # Define YouTube category IDs mapped to your domains
