@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>YouTube Video Processor</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      input[type="text"] {
+        padding: 10px;
+        font-size: 16px;
+        width: 300px;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+      }
+      #result {
+        margin-top: 20px;
+        font-family: monospace;
+        white-space: pre-wrap;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>YouTube Video Processor</h1>
+    <label for="video-url">Enter YouTube Video URL:</label>
+    <input type="text" id="video-url" placeholder="https://www.youtube.com/watch?v=VIDEO_ID" />
+    <button onclick="processVideo()">Process Video</button>
+    <pre id="result"></pre>
+
+    <script>
+      async function processVideo() {
+        const videoUrl = document.getElementById("video-url").value;
+        const response = await fetch("http://localhost:8000/process_video", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ url: videoUrl }),
+        });
+        const data = await response.json();
+        document.getElementById("result").textContent = JSON.stringify(data, null, 2);
+      }
+    </script>
+  </body>
+</html>
